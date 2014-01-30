@@ -2,8 +2,6 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  #config.vm.box = "centos-64-x64-vbox"
-  #config.vm.box_url = "http://ideas-download:ideas-download@nexus.asv.local/content/repositories/ideas-releases-local/vagrant-boxes/centos-64-x64-vbox/1.0/centos-64-x64-vbox-1.0.box"
   config.vm.box = "centos65-x86_64"
   config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.5-x86_64-v20140110.box"
 
