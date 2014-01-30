@@ -9,6 +9,9 @@
 
 include_recipe "yum-epel"
 include_recipe "apache2"
+include_recipe "apache2::mod_php5"
+include_recipe "apache2::mod_rewrite"
+include_recipe "apache2::mod_auth_basic"
 
 include_recipe "mysql::server"
 
@@ -74,4 +77,23 @@ mysql_database_user node['randshop']['database_user'] do
   password node['randshop']['database_user_passwd']
   privileges    [:all]
   action        :grant
+end
+
+template "#{node['randshop']['docroot']}/admin/.htaccess" do
+  source "htaccess.erb"
+  mode 0640
+  owner "root"
+  group node['apache']['group']
+  variables({
+     :htpasswd => node['randshop']['htpasswd']
+  })
+end
+
+template "#{node['randshop']['htpasswd']}" do
+  # htpasswd -dn admin
+  # admin:sUBleaSe1=
+  source "htpasswd.erb"
+  mode 0640
+  owner "root"
+  group node['apache']['group']
 end
