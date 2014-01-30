@@ -10,31 +10,31 @@
       "locked_version": "3.0.6"
     },
     "apache2": {
-      "locked_version": "1.8.14"
+      "locked_version": "1.7.0"
     },
     "mysql": {
-      "locked_version": "4.0.20"
+      "locked_version": "3.0.2"
     },
     "openssl": {
-      "locked_version": "1.1.0"
+      "locked_version": "1.0.2"
     },
     "build-essential": {
       "locked_version": "1.4.2"
     },
     "ark": {
-      "locked_version": "0.4.2"
+      "locked_version": "0.3.2"
     },
     "database": {
-      "locked_version": "1.6.0"
+      "locked_version": "1.4.0"
     },
     "postgresql": {
-      "locked_version": "3.3.4"
+      "locked_version": "3.0.2"
     },
     "apt": {
       "locked_version": "2.3.4"
     },
     "aws": {
-      "locked_version": "1.0.0"
+      "locked_version": "0.101.4"
     },
     "xfs": {
       "locked_version": "1.1.0"

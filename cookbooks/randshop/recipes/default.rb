@@ -9,9 +9,6 @@
 
 include_recipe "yum-epel"
 include_recipe "apache2"
-#include_recipe "apache2::mod_php5"
-#include_recipe "apache2::mod_rewrite"
-#include_recipe "apache2::mod_auth_basic"
 
 include_recipe "mysql::server"
 

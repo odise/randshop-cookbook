@@ -3,10 +3,6 @@ default['randshop']['docroot'] = '/var/www/html/randshop'
 default['randshop']['installroot'] = '/var/www/html'
 default['randshop']['phpinidir'] = '/var/www/html/'
 
-default['apache']['default_modules'] = [
-   "mod_rewrite", "mod_auth_basic", "mod_php5" 
-]
-
 default['mysql']['bind_address'] = 'localhost'
 #default['mysql']['ec2_path'] = ''
 
