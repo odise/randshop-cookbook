@@ -27,6 +27,14 @@ Vagrant.configure("2") do |config|
       chef.run_list = [
         "recipe[randshop]",
       ]
+      chef.json = {
+        'mysql' => {
+          "server_root_password" => "iloverandompasswordsbutthiswilldo",
+          "server_repl_password" => "iloverandompasswordsbutthiswilldo",
+          "server_debian_password" => "iloverandompasswordsbutthiswilldo"
+        }
+      }
+
       chef.log_level = :debug
     end
   end

@@ -3,17 +3,26 @@
     "randshop": {
       "path": "./cookbooks/randshop"
     },
+    "yum-epel": {
+      "locked_version": "0.2.0"
+    },
+    "yum": {
+      "locked_version": "3.0.6"
+    },
     "apache2": {
-      "locked_version": "1.7.0"
+      "locked_version": "1.8.14"
     },
     "mysql": {
-      "locked_version": "3.0.2"
+      "locked_version": "4.0.20"
     },
     "openssl": {
-      "locked_version": "1.0.2"
+      "locked_version": "1.1.0"
     },
     "build-essential": {
       "locked_version": "1.4.2"
+    },
+    "ark": {
+      "locked_version": "0.4.2"
     }
   }
 }
