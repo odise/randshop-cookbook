@@ -55,3 +55,26 @@ ark 'randshop' do
   checksum "f66be742a3748dcf124ca247b149c9f50f59adf92695932fa053707581f9a1a5"
   strip_leading_dir false
 end
+
+include_recipe "database::mysql"
+
+# create connection info as an external ruby hash
+mysql_connection_info = {
+  :host     => 'localhost',
+  :username => 'root',
+  :password => node['mysql']['server_root_password']
+}
+
+mysql_database 'randshop' do
+  connection    mysql_connection_info
+  action :create
+end
+
+# Grant all privileges on all tables in foo db
+mysql_database_user node['randshop']['database_user'] do
+  connection    mysql_connection_info
+  database_name node['randshop']['database_name']
+  password node['randshop']['database_user_passwd']
+  privileges    [:all]
+  action        :grant
+end

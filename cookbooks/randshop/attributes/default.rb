@@ -17,3 +17,8 @@ default['mysql']['remove_test_database'] = true
 default['mysql']['server_root_password'] = 'root'
 default['mysql']['server_repl_password'] = 'root'
 default['mysql']['server_debian_password'] = 'root'
+
+# Grant all privileges on all tables in foo db
+default['randshop']['database_user'] = 'randshop_user'
+default['randshop']['database_user_passwd'] = 'randshop_user'
+default['randshop']['database_nam'] = 'randshop'

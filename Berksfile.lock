@@ -23,6 +23,21 @@
     },
     "ark": {
       "locked_version": "0.4.2"
+    },
+    "database": {
+      "locked_version": "1.6.0"
+    },
+    "postgresql": {
+      "locked_version": "3.3.4"
+    },
+    "apt": {
+      "locked_version": "2.3.4"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
+    },
+    "xfs": {
+      "locked_version": "1.1.0"
     }
   }
 }
