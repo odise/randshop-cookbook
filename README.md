@@ -30,7 +30,7 @@ Vagrant
 
 A `vagrant up` should start a CentOS base box and trigger chef-solo.
 
-EC2 provisioning with knkife-ec2
+EC2 provisioning with knife-ec2
 =================================
 
 Create the box:

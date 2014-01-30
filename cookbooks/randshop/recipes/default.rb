@@ -2,7 +2,7 @@
 # Cookbook Name:: randshop
 # Recipe:: default
 #
-# Copyright 2014, YOUR_COMPANY_NAME
+# Copyright 2014, Jan Nabbefeld
 #
 # All rights reserved - Do Not Redistribute
 #
