@@ -79,21 +79,23 @@ mysql_database_user node['randshop']['database_user'] do
   action        :grant
 end
 
-template "#{node['randshop']['docroot']}/admin/.htaccess" do
-  source "htaccess.erb"
-  mode 0640
-  owner "root"
-  group node['apache']['group']
-  variables({
-     :htpasswd => node['randshop']['htpasswd']
-  })
-end
-
-template "#{node['randshop']['htpasswd']}" do
-  # htpasswd -dn admin
-  # admin:sUBleaSe1=
-  source "htpasswd.erb"
-  mode 0640
-  owner "root"
-  group node['apache']['group']
+if node['randshop']['overwrite_htaccess'] 
+  template "#{node['randshop']['docroot']}/.htaccess" do
+    source "htaccess.erb"
+    mode 0660
+    owner "root"
+    group node['apache']['group']
+    variables({
+       :htpasswd => node['randshop']['htpasswd']
+    })
+  end
+  
+  template "#{node['randshop']['htpasswd']}" do
+    # htpasswd -dn admin
+    # admin:sUBleaSe1=
+    source "htpasswd.erb"
+    mode 0640
+    owner "root"
+    group node['apache']['group']
+  end
 end
